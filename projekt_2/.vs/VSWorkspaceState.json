@@ -1,0 +1,10 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\ProjectCinema.common",
+    "\\ProjectCinema.domain",
+    "\\ProjectCinema.infrastructure"
+  ],
+  "SelectedNode": "\\ProjectCinema.infrastructure\\CinemaTicketDbContext.cs",
+  "PreviewInSolutionExplorer": false
+}
