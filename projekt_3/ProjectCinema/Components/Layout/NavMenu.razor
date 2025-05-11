@@ -1,0 +1,25 @@
+﻿<div class="top-row ps-3 navbar navbar-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="">ProjectCinema</a>
+    </div>
+</div>
+
+<input type="checkbox" title="Navigation menu" class="navbar-toggler" />
+
+<div class="nav-scrollable" onclick="document.querySelector('.navbar-toggler').click()">
+    <nav class="flex-column p-3">
+        <NavLink class="nav-link nb-2" href="/" Match="NavLinkMatch.All">
+            Strona Główna    
+        </NavLink>
+        <NavLink class="nav-link nb-2" href="/movies">
+            Lista Filmów
+        </NavLink>
+        <NavLink class="nav-link nb-2" href="/create-movies">
+            Dodaj Nowy Film
+        </NavLink>
+        <NavLink class="nav-link nb-2" href="/test-form">
+            Test
+        </NavLink>
+    </nav>
+</div>
+
