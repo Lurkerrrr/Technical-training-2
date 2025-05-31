@@ -1,0 +1,543 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\w69976\\Desktop\\projekt\\ProjectCinema.domain\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8E77EBC8-0CD1-4050-BC8D-972847E3990B}|ProjectCinema.domain.csproj|c:\\users\\w69976\\desktop\\projekt\\projectcinema.domain\\command\\movie\\create\\createmoviecommandvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E77EBC8-0CD1-4050-BC8D-972847E3990B}|ProjectCinema.domain.csproj|solutionrelative:command\\movie\\create\\createmoviecommandvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E77EBC8-0CD1-4050-BC8D-972847E3990B}|ProjectCinema.domain.csproj|c:\\users\\w69976\\desktop\\projekt\\projectcinema.domain\\command\\movie\\create\\createmoviecommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E77EBC8-0CD1-4050-BC8D-972847E3990B}|ProjectCinema.domain.csproj|solutionrelative:command\\movie\\create\\createmoviecommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{02CE6F5F-5478-42D8-A0E8-258E17FF90C3}|..\\ProjectCinema\\ProjectCinema.csproj|c:\\users\\w69976\\desktop\\projekt\\projectcinema\\components\\pages\\moviecreate.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E77EBC8-0CD1-4050-BC8D-972847E3990B}|ProjectCinema.domain.csproj|c:\\users\\w69976\\desktop\\projekt\\projectcinema.domain\\query\\movie\\getmoviecategories\\getmoviecategoriesqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E77EBC8-0CD1-4050-BC8D-972847E3990B}|ProjectCinema.domain.csproj|solutionrelative:query\\movie\\getmoviecategories\\getmoviecategoriesqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E77EBC8-0CD1-4050-BC8D-972847E3990B}|ProjectCinema.domain.csproj|c:\\users\\w69976\\desktop\\projekt\\projectcinema.domain\\query\\movie\\getmoviecategories\\getmoviecategoriesquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E77EBC8-0CD1-4050-BC8D-972847E3990B}|ProjectCinema.domain.csproj|solutionrelative:query\\movie\\getmoviecategories\\getmoviecategoriesquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E77EBC8-0CD1-4050-BC8D-972847E3990B}|ProjectCinema.domain.csproj|c:\\users\\w69976\\desktop\\projekt\\projectcinema.domain\\repositories\\imoviesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E77EBC8-0CD1-4050-BC8D-972847E3990B}|ProjectCinema.domain.csproj|solutionrelative:repositories\\imoviesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E77EBC8-0CD1-4050-BC8D-972847E3990B}|ProjectCinema.domain.csproj|c:\\users\\w69976\\desktop\\projekt\\projectcinema.domain\\query\\movie\\getallmoviesquery\\getallmoviesquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E77EBC8-0CD1-4050-BC8D-972847E3990B}|ProjectCinema.domain.csproj|solutionrelative:query\\movie\\getallmoviesquery\\getallmoviesquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E77EBC8-0CD1-4050-BC8D-972847E3990B}|ProjectCinema.domain.csproj|c:\\users\\w69976\\desktop\\projekt\\projectcinema.domain\\query\\movie\\getallmoviesquery\\getallmoviesqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E77EBC8-0CD1-4050-BC8D-972847E3990B}|ProjectCinema.domain.csproj|solutionrelative:query\\movie\\getallmoviesquery\\getallmoviesqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{02CE6F5F-5478-42D8-A0E8-258E17FF90C3}|..\\ProjectCinema\\ProjectCinema.csproj|c:\\users\\w69976\\desktop\\projekt\\projectcinema\\components\\pages\\movies.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F4A51F35-C929-44D2-B376-1AB053DB2813}|..\\ProjectCinema.infrastructure\\ProjectCinema.infrastructure.csproj|c:\\users\\w69976\\desktop\\projekt\\projectcinema.infrastructure\\repository\\moviesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F4A51F35-C929-44D2-B376-1AB053DB2813}|..\\ProjectCinema.infrastructure\\ProjectCinema.infrastructure.csproj|c:\\users\\w69976\\desktop\\projekt\\projectcinema.infrastructure\\cinematicketdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{02CE6F5F-5478-42D8-A0E8-258E17FF90C3}|..\\ProjectCinema\\ProjectCinema.csproj|c:\\users\\w69976\\desktop\\projekt\\projectcinema\\extentions\\cinemadependancyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{02CE6F5F-5478-42D8-A0E8-258E17FF90C3}|..\\ProjectCinema\\ProjectCinema.csproj|c:\\users\\w69976\\desktop\\projekt\\projectcinema\\components\\pages\\moviecreate.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E77EBC8-0CD1-4050-BC8D-972847E3990B}|ProjectCinema.domain.csproj|c:\\users\\w69976\\desktop\\projekt\\projectcinema.domain\\query\\dtos\\moviecategorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E77EBC8-0CD1-4050-BC8D-972847E3990B}|ProjectCinema.domain.csproj|solutionrelative:query\\dtos\\moviecategorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{02CE6F5F-5478-42D8-A0E8-258E17FF90C3}|..\\ProjectCinema\\ProjectCinema.csproj|c:\\users\\w69976\\desktop\\projekt\\projectcinema\\components\\models\\createmovieformmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E77EBC8-0CD1-4050-BC8D-972847E3990B}|ProjectCinema.domain.csproj|c:\\users\\w69976\\desktop\\projekt\\projectcinema.domain\\query\\dtos\\moviedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E77EBC8-0CD1-4050-BC8D-972847E3990B}|ProjectCinema.domain.csproj|solutionrelative:query\\dtos\\moviedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{02CE6F5F-5478-42D8-A0E8-258E17FF90C3}|..\\ProjectCinema\\ProjectCinema.csproj|c:\\users\\w69976\\desktop\\projekt\\projectcinema\\components\\pages\\movies.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{02CE6F5F-5478-42D8-A0E8-258E17FF90C3}|..\\ProjectCinema\\ProjectCinema.csproj|c:\\users\\w69976\\desktop\\projekt\\projectcinema\\components\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{02CE6F5F-5478-42D8-A0E8-258E17FF90C3}|..\\ProjectCinema\\ProjectCinema.csproj|c:\\users\\w69976\\desktop\\projekt\\projectcinema\\components\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{02CE6F5F-5478-42D8-A0E8-258E17FF90C3}|..\\ProjectCinema\\ProjectCinema.csproj|c:\\users\\w69976\\desktop\\projekt\\projectcinema\\components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F4A51F35-C929-44D2-B376-1AB053DB2813}|..\\ProjectCinema.infrastructure\\ProjectCinema.infrastructure.csproj|c:\\users\\w69976\\desktop\\projekt\\projectcinema.infrastructure\\projectcinema.infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{02CE6F5F-5478-42D8-A0E8-258E17FF90C3}|..\\ProjectCinema\\ProjectCinema.csproj|c:\\users\\w69976\\desktop\\projekt\\projectcinema\\components\\pages\\error.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{02CE6F5F-5478-42D8-A0E8-258E17FF90C3}|..\\ProjectCinema\\ProjectCinema.csproj|c:\\users\\w69976\\desktop\\projekt\\projectcinema\\components\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{02CE6F5F-5478-42D8-A0E8-258E17FF90C3}|..\\ProjectCinema\\ProjectCinema.csproj|c:\\users\\w69976\\desktop\\projekt\\projectcinema\\wwwroot\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{02CE6F5F-5478-42D8-A0E8-258E17FF90C3}|..\\ProjectCinema\\ProjectCinema.csproj|c:\\users\\w69976\\desktop\\projekt\\projectcinema\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{02CE6F5F-5478-42D8-A0E8-258E17FF90C3}|..\\ProjectCinema\\ProjectCinema.csproj|c:\\users\\w69976\\desktop\\projekt\\projectcinema\\wwwroot\\cinema-style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F4A51F35-C929-44D2-B376-1AB053DB2813}|..\\ProjectCinema.infrastructure\\ProjectCinema.infrastructure.csproj|c:\\users\\w69976\\desktop\\projekt\\projectcinema.infrastructure\\migrations\\20250509165952_initialdatabase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{02CE6F5F-5478-42D8-A0E8-258E17FF90C3}|..\\ProjectCinema\\ProjectCinema.csproj|c:\\users\\w69976\\desktop\\projekt\\projectcinema\\components\\pages\\weather.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{02CE6F5F-5478-42D8-A0E8-258E17FF90C3}|..\\ProjectCinema\\ProjectCinema.csproj|c:\\users\\w69976\\desktop\\projekt\\projectcinema\\components\\layout\\mainlayout.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{02CE6F5F-5478-42D8-A0E8-258E17FF90C3}|..\\ProjectCinema\\ProjectCinema.csproj|c:\\users\\w69976\\desktop\\projekt\\projectcinema\\components\\layout\\navmenu.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E77EBC8-0CD1-4050-BC8D-972847E3990B}|ProjectCinema.domain.csproj|c:\\users\\w69976\\desktop\\projekt\\projectcinema.domain\\query\\dtos\\ticketdetailsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E77EBC8-0CD1-4050-BC8D-972847E3990B}|ProjectCinema.domain.csproj|solutionrelative:query\\dtos\\ticketdetailsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E77EBC8-0CD1-4050-BC8D-972847E3990B}|ProjectCinema.domain.csproj|c:\\users\\w69976\\desktop\\projekt\\projectcinema.domain\\query\\dtos\\movieseancedetailsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E77EBC8-0CD1-4050-BC8D-972847E3990B}|ProjectCinema.domain.csproj|solutionrelative:query\\dtos\\movieseancedetailsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CreateMovieCommandValidator.cs",
+              "DocumentMoniker": "C:\\Users\\w69976\\Desktop\\projekt\\ProjectCinema.domain\\Command\\Movie\\Create\\CreateMovieCommandValidator.cs",
+              "RelativeDocumentMoniker": "Command\\Movie\\Create\\CreateMovieCommandValidator.cs",
+              "ToolTip": "C:\\Users\\w69976\\Desktop\\projekt\\ProjectCinema.domain\\Command\\Movie\\Create\\CreateMovieCommandValidator.cs",
+              "RelativeToolTip": "Command\\Movie\\Create\\CreateMovieCommandValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-23T18:41:13.504Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CreateMovieCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\w69976\\Desktop\\projekt\\ProjectCinema.domain\\Command\\Movie\\Create\\CreateMovieCommandHandler.cs",
+              "RelativeDocumentMoniker": "Command\\Movie\\Create\\CreateMovieCommandHandler.cs",
+              "ToolTip": "C:\\Users\\w69976\\Desktop\\projekt\\ProjectCinema.domain\\Command\\Movie\\Create\\CreateMovieCommandHandler.cs",
+              "RelativeToolTip": "Command\\Movie\\Create\\CreateMovieCommandHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-23T18:40:09.314Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Movies.razor",
+              "DocumentMoniker": "C:\\Users\\w69976\\Desktop\\projekt\\ProjectCinema\\Components\\Pages\\Movies.razor",
+              "RelativeDocumentMoniker": "..\\ProjectCinema\\Components\\Pages\\Movies.razor",
+              "ToolTip": "C:\\Users\\w69976\\Desktop\\projekt\\ProjectCinema\\Components\\Pages\\Movies.razor",
+              "RelativeToolTip": "..\\ProjectCinema\\Components\\Pages\\Movies.razor",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-09T17:18:51.11Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "GetAllMoviesQuery.cs",
+              "DocumentMoniker": "C:\\Users\\w69976\\Desktop\\projekt\\ProjectCinema.domain\\Query\\Movie\\GetAllMoviesQuery\\GetAllMoviesQuery.cs",
+              "RelativeDocumentMoniker": "Query\\Movie\\GetAllMoviesQuery\\GetAllMoviesQuery.cs",
+              "ToolTip": "C:\\Users\\w69976\\Desktop\\projekt\\ProjectCinema.domain\\Query\\Movie\\GetAllMoviesQuery\\GetAllMoviesQuery.cs",
+              "RelativeToolTip": "Query\\Movie\\GetAllMoviesQuery\\GetAllMoviesQuery.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-23T16:06:20.841Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "GetMovieCategoriesQueryHandler.cs",
+              "DocumentMoniker": "C:\\Users\\w69976\\Desktop\\projekt\\ProjectCinema.domain\\Query\\Movie\\GetMovieCategories\\GetMovieCategoriesQueryHandler.cs",
+              "RelativeDocumentMoniker": "Query\\Movie\\GetMovieCategories\\GetMovieCategoriesQueryHandler.cs",
+              "ToolTip": "C:\\Users\\w69976\\Desktop\\projekt\\ProjectCinema.domain\\Query\\Movie\\GetMovieCategories\\GetMovieCategoriesQueryHandler.cs",
+              "RelativeToolTip": "Query\\Movie\\GetMovieCategories\\GetMovieCategoriesQueryHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-23T17:52:30.933Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "GetMovieCategoriesQuery.cs",
+              "DocumentMoniker": "C:\\Users\\w69976\\Desktop\\projekt\\ProjectCinema.domain\\Query\\Movie\\GetMovieCategories\\GetMovieCategoriesQuery.cs",
+              "RelativeDocumentMoniker": "Query\\Movie\\GetMovieCategories\\GetMovieCategoriesQuery.cs",
+              "ToolTip": "C:\\Users\\w69976\\Desktop\\projekt\\ProjectCinema.domain\\Query\\Movie\\GetMovieCategories\\GetMovieCategoriesQuery.cs",
+              "RelativeToolTip": "Query\\Movie\\GetMovieCategories\\GetMovieCategoriesQuery.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-23T17:48:42.687Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "CinemaTicketDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\w69976\\Desktop\\projekt\\ProjectCinema.infrastructure\\CinemaTicketDbContext.cs",
+              "RelativeDocumentMoniker": "..\\ProjectCinema.infrastructure\\CinemaTicketDbContext.cs",
+              "ToolTip": "C:\\Users\\w69976\\Desktop\\projekt\\ProjectCinema.infrastructure\\CinemaTicketDbContext.cs",
+              "RelativeToolTip": "..\\ProjectCinema.infrastructure\\CinemaTicketDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAB+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-09T16:51:08.339Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "MoviesRepository.cs",
+              "DocumentMoniker": "C:\\Users\\w69976\\Desktop\\projekt\\ProjectCinema.infrastructure\\Repository\\MoviesRepository.cs",
+              "RelativeDocumentMoniker": "..\\ProjectCinema.infrastructure\\Repository\\MoviesRepository.cs",
+              "ToolTip": "C:\\Users\\w69976\\Desktop\\projekt\\ProjectCinema.infrastructure\\Repository\\MoviesRepository.cs",
+              "RelativeToolTip": "..\\ProjectCinema.infrastructure\\Repository\\MoviesRepository.cs",
+              "ViewState": "AgIAADUAAAAAAAAAAAAuwFMAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-23T18:07:24.273Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IMoviesRepository.cs",
+              "DocumentMoniker": "C:\\Users\\w69976\\Desktop\\projekt\\ProjectCinema.domain\\Repositories\\IMoviesRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\IMoviesRepository.cs",
+              "ToolTip": "C:\\Users\\w69976\\Desktop\\projekt\\ProjectCinema.domain\\Repositories\\IMoviesRepository.cs",
+              "RelativeToolTip": "Repositories\\IMoviesRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-23T18:06:55.347Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MovieCreate.razor.cs",
+              "DocumentMoniker": "C:\\Users\\w69976\\Desktop\\projekt\\ProjectCinema\\Components\\Pages\\MovieCreate.razor.cs",
+              "RelativeDocumentMoniker": "..\\ProjectCinema\\Components\\Pages\\MovieCreate.razor.cs",
+              "ToolTip": "C:\\Users\\w69976\\Desktop\\projekt\\ProjectCinema\\Components\\Pages\\MovieCreate.razor.cs",
+              "RelativeToolTip": "..\\ProjectCinema\\Components\\Pages\\MovieCreate.razor.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABoAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-23T17:15:21.847Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "GetAllMoviesQueryHandler.cs",
+              "DocumentMoniker": "C:\\Users\\w69976\\Desktop\\projekt\\ProjectCinema.domain\\Query\\Movie\\GetAllMoviesQuery\\GetAllMoviesQueryHandler.cs",
+              "RelativeDocumentMoniker": "Query\\Movie\\GetAllMoviesQuery\\GetAllMoviesQueryHandler.cs",
+              "ToolTip": "C:\\Users\\w69976\\Desktop\\projekt\\ProjectCinema.domain\\Query\\Movie\\GetAllMoviesQuery\\GetAllMoviesQueryHandler.cs",
+              "RelativeToolTip": "Query\\Movie\\GetAllMoviesQuery\\GetAllMoviesQueryHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-09T15:53:10.584Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "CinemaDependancyInjection.cs",
+              "DocumentMoniker": "C:\\Users\\w69976\\Desktop\\projekt\\ProjectCinema\\Extentions\\CinemaDependancyInjection.cs",
+              "RelativeDocumentMoniker": "..\\ProjectCinema\\Extentions\\CinemaDependancyInjection.cs",
+              "ToolTip": "C:\\Users\\w69976\\Desktop\\projekt\\ProjectCinema\\Extentions\\CinemaDependancyInjection.cs",
+              "RelativeToolTip": "..\\ProjectCinema\\Extentions\\CinemaDependancyInjection.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAABPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-09T16:16:24.801Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "MovieCreate.razor",
+              "DocumentMoniker": "C:\\Users\\w69976\\Desktop\\projekt\\ProjectCinema\\Components\\Pages\\MovieCreate.razor",
+              "RelativeDocumentMoniker": "..\\ProjectCinema\\Components\\Pages\\MovieCreate.razor",
+              "ToolTip": "C:\\Users\\w69976\\Desktop\\projekt\\ProjectCinema\\Components\\Pages\\MovieCreate.razor",
+              "RelativeToolTip": "..\\ProjectCinema\\Components\\Pages\\MovieCreate.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACsAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-23T16:25:46.638Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "MovieCategoryDto.cs",
+              "DocumentMoniker": "C:\\Users\\w69976\\Desktop\\projekt\\ProjectCinema.domain\\Query\\Dtos\\MovieCategoryDto.cs",
+              "RelativeDocumentMoniker": "Query\\Dtos\\MovieCategoryDto.cs",
+              "ToolTip": "C:\\Users\\w69976\\Desktop\\projekt\\ProjectCinema.domain\\Query\\Dtos\\MovieCategoryDto.cs",
+              "RelativeToolTip": "Query\\Dtos\\MovieCategoryDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-23T17:48:14.228Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "CreateMovieFormModel.cs",
+              "DocumentMoniker": "C:\\Users\\w69976\\Desktop\\projekt\\ProjectCinema\\Components\\Models\\CreateMovieFormModel.cs",
+              "RelativeDocumentMoniker": "..\\ProjectCinema\\Components\\Models\\CreateMovieFormModel.cs",
+              "ToolTip": "C:\\Users\\w69976\\Desktop\\projekt\\ProjectCinema\\Components\\Models\\CreateMovieFormModel.cs",
+              "RelativeToolTip": "..\\ProjectCinema\\Components\\Models\\CreateMovieFormModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-23T17:05:04.375Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "App.razor",
+              "DocumentMoniker": "C:\\Users\\w69976\\Desktop\\projekt\\ProjectCinema\\Components\\App.razor",
+              "RelativeDocumentMoniker": "..\\ProjectCinema\\Components\\App.razor",
+              "ToolTip": "C:\\Users\\w69976\\Desktop\\projekt\\ProjectCinema\\Components\\App.razor",
+              "RelativeToolTip": "..\\ProjectCinema\\Components\\App.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-23T16:00:59.581Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "app.css",
+              "DocumentMoniker": "C:\\Users\\w69976\\Desktop\\projekt\\ProjectCinema\\wwwroot\\app.css",
+              "RelativeDocumentMoniker": "..\\ProjectCinema\\wwwroot\\app.css",
+              "ToolTip": "C:\\Users\\w69976\\Desktop\\projekt\\ProjectCinema\\wwwroot\\app.css",
+              "RelativeToolTip": "..\\ProjectCinema\\wwwroot\\app.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-05-23T16:03:10.567Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "_Imports.razor",
+              "DocumentMoniker": "C:\\Users\\w69976\\Desktop\\projekt\\ProjectCinema\\Components\\_Imports.razor",
+              "RelativeDocumentMoniker": "..\\ProjectCinema\\Components\\_Imports.razor",
+              "ToolTip": "C:\\Users\\w69976\\Desktop\\projekt\\ProjectCinema\\Components\\_Imports.razor",
+              "RelativeToolTip": "..\\ProjectCinema\\Components\\_Imports.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-23T16:03:27.898Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Error.razor",
+              "DocumentMoniker": "C:\\Users\\w69976\\Desktop\\projekt\\ProjectCinema\\Components\\Pages\\Error.razor",
+              "RelativeDocumentMoniker": "..\\ProjectCinema\\Components\\Pages\\Error.razor",
+              "ToolTip": "C:\\Users\\w69976\\Desktop\\projekt\\ProjectCinema\\Components\\Pages\\Error.razor",
+              "RelativeToolTip": "..\\ProjectCinema\\Components\\Pages\\Error.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-23T16:03:56.838Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Home.razor",
+              "DocumentMoniker": "C:\\Users\\w69976\\Desktop\\projekt\\ProjectCinema\\Components\\Pages\\Home.razor",
+              "RelativeDocumentMoniker": "..\\ProjectCinema\\Components\\Pages\\Home.razor",
+              "ToolTip": "C:\\Users\\w69976\\Desktop\\projekt\\ProjectCinema\\Components\\Pages\\Home.razor",
+              "RelativeToolTip": "..\\ProjectCinema\\Components\\Pages\\Home.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-23T15:48:53.472Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "MovieDto.cs",
+              "DocumentMoniker": "C:\\Users\\w69976\\Desktop\\projekt\\ProjectCinema.domain\\Query\\Dtos\\MovieDto.cs",
+              "RelativeDocumentMoniker": "Query\\Dtos\\MovieDto.cs",
+              "ToolTip": "C:\\Users\\w69976\\Desktop\\projekt\\ProjectCinema.domain\\Query\\Dtos\\MovieDto.cs",
+              "RelativeToolTip": "Query\\Dtos\\MovieDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-09T15:43:27.202Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "ProjectCinema.infrastructure",
+              "DocumentMoniker": "C:\\Users\\w69976\\Desktop\\projekt\\ProjectCinema.infrastructure\\ProjectCinema.infrastructure.csproj",
+              "RelativeDocumentMoniker": "..\\ProjectCinema.infrastructure\\ProjectCinema.infrastructure.csproj",
+              "ToolTip": "C:\\Users\\w69976\\Desktop\\projekt\\ProjectCinema.infrastructure\\ProjectCinema.infrastructure.csproj",
+              "RelativeToolTip": "..\\ProjectCinema.infrastructure\\ProjectCinema.infrastructure.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-05-23T16:06:17.398Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Movies.razor.cs",
+              "DocumentMoniker": "C:\\Users\\w69976\\Desktop\\projekt\\ProjectCinema\\Components\\Pages\\Movies.razor.cs",
+              "RelativeDocumentMoniker": "..\\ProjectCinema\\Components\\Pages\\Movies.razor.cs",
+              "ToolTip": "C:\\Users\\w69976\\Desktop\\projekt\\ProjectCinema\\Components\\Pages\\Movies.razor.cs",
+              "RelativeToolTip": "..\\ProjectCinema\\Components\\Pages\\Movies.razor.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-09T17:20:41.168Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "NavMenu.razor.css",
+              "DocumentMoniker": "C:\\Users\\w69976\\Desktop\\projekt\\ProjectCinema\\Components\\Layout\\NavMenu.razor.css",
+              "RelativeDocumentMoniker": "..\\ProjectCinema\\Components\\Layout\\NavMenu.razor.css",
+              "ToolTip": "C:\\Users\\w69976\\Desktop\\projekt\\ProjectCinema\\Components\\Layout\\NavMenu.razor.css",
+              "RelativeToolTip": "..\\ProjectCinema\\Components\\Layout\\NavMenu.razor.css",
+              "ViewState": "AgIAADkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-05-23T15:43:20.676Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "MainLayout.razor.css",
+              "DocumentMoniker": "C:\\Users\\w69976\\Desktop\\projekt\\ProjectCinema\\Components\\Layout\\MainLayout.razor.css",
+              "RelativeDocumentMoniker": "..\\ProjectCinema\\Components\\Layout\\MainLayout.razor.css",
+              "ToolTip": "C:\\Users\\w69976\\Desktop\\projekt\\ProjectCinema\\Components\\Layout\\MainLayout.razor.css",
+              "RelativeToolTip": "..\\ProjectCinema\\Components\\Layout\\MainLayout.razor.css",
+              "ViewState": "AgIAAEgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-05-23T15:39:31.133Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "Weather.razor",
+              "DocumentMoniker": "C:\\Users\\w69976\\Desktop\\projekt\\ProjectCinema\\Components\\Pages\\Weather.razor",
+              "RelativeDocumentMoniker": "..\\ProjectCinema\\Components\\Pages\\Weather.razor",
+              "ToolTip": "C:\\Users\\w69976\\Desktop\\projekt\\ProjectCinema\\Components\\Pages\\Weather.razor",
+              "RelativeToolTip": "..\\ProjectCinema\\Components\\Pages\\Weather.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-23T15:31:45.987Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "MainLayout.razor",
+              "DocumentMoniker": "C:\\Users\\w69976\\Desktop\\projekt\\ProjectCinema\\Components\\Layout\\MainLayout.razor",
+              "RelativeDocumentMoniker": "..\\ProjectCinema\\Components\\Layout\\MainLayout.razor",
+              "ToolTip": "C:\\Users\\w69976\\Desktop\\projekt\\ProjectCinema\\Components\\Layout\\MainLayout.razor",
+              "RelativeToolTip": "..\\ProjectCinema\\Components\\Layout\\MainLayout.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-09T18:03:47.718Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "cinema-style.css",
+              "DocumentMoniker": "C:\\Users\\w69976\\Desktop\\projekt\\ProjectCinema\\wwwroot\\cinema-style.css",
+              "RelativeDocumentMoniker": "..\\ProjectCinema\\wwwroot\\cinema-style.css",
+              "ToolTip": "C:\\Users\\w69976\\Desktop\\projekt\\ProjectCinema\\wwwroot\\cinema-style.css",
+              "RelativeToolTip": "..\\ProjectCinema\\wwwroot\\cinema-style.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-05-23T15:43:39.104Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "NavMenu.razor",
+              "DocumentMoniker": "C:\\Users\\w69976\\Desktop\\projekt\\ProjectCinema\\Components\\Layout\\NavMenu.razor",
+              "RelativeDocumentMoniker": "..\\ProjectCinema\\Components\\Layout\\NavMenu.razor",
+              "ToolTip": "C:\\Users\\w69976\\Desktop\\projekt\\ProjectCinema\\Components\\Layout\\NavMenu.razor",
+              "RelativeToolTip": "..\\ProjectCinema\\Components\\Layout\\NavMenu.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-09T18:03:36.43Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "20250509165952_InitialDatabase.cs",
+              "DocumentMoniker": "C:\\Users\\w69976\\Desktop\\projekt\\ProjectCinema.infrastructure\\Migrations\\20250509165952_InitialDatabase.cs",
+              "RelativeDocumentMoniker": "..\\ProjectCinema.infrastructure\\Migrations\\20250509165952_InitialDatabase.cs",
+              "ToolTip": "C:\\Users\\w69976\\Desktop\\projekt\\ProjectCinema.infrastructure\\Migrations\\20250509165952_InitialDatabase.cs",
+              "RelativeToolTip": "..\\ProjectCinema.infrastructure\\Migrations\\20250509165952_InitialDatabase.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-09T16:59:53.001Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "TicketDetailsDto.cs",
+              "DocumentMoniker": "C:\\Users\\w69976\\Desktop\\projekt\\ProjectCinema.domain\\Query\\Dtos\\TicketDetailsDto.cs",
+              "RelativeDocumentMoniker": "Query\\Dtos\\TicketDetailsDto.cs",
+              "ToolTip": "C:\\Users\\w69976\\Desktop\\projekt\\ProjectCinema.domain\\Query\\Dtos\\TicketDetailsDto.cs",
+              "RelativeToolTip": "Query\\Dtos\\TicketDetailsDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-09T15:47:15.108Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "MovieSeanceDetailsDto.cs",
+              "DocumentMoniker": "C:\\Users\\w69976\\Desktop\\projekt\\ProjectCinema.domain\\Query\\Dtos\\MovieSeanceDetailsDto.cs",
+              "RelativeDocumentMoniker": "Query\\Dtos\\MovieSeanceDetailsDto.cs",
+              "ToolTip": "C:\\Users\\w69976\\Desktop\\projekt\\ProjectCinema.domain\\Query\\Dtos\\MovieSeanceDetailsDto.cs",
+              "RelativeToolTip": "Query\\Dtos\\MovieSeanceDetailsDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-09T15:46:20.078Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
