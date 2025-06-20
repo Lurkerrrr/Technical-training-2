@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="11.11.0" />
+    <PackageReference Include="MediatR" Version="12.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ProjectCinema.common\ProjectCinema.common.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Command\Movie\Delete\" />
+    <Folder Include="Command\Tickets\" />
+    <Folder Include="Command\Seances\" />
+    <Folder Include="Query\Movie\GetMovieQuery\" />
+    <Folder Include="Query\Seances\" />
+  </ItemGroup>
+
+</Project>

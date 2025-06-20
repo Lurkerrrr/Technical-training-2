@@ -1,0 +1,15 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\ProjectCinema.common",
+    "\\ProjectCinema.domain",
+    "\\ProjectCinema.domain\\Command",
+    "\\ProjectCinema.domain\\Command\\Movie",
+    "\\ProjectCinema.domain\\Query",
+    "\\ProjectCinema.domain\\Query\\Dtos",
+    "\\ProjectCinema.domain\\Query\\Movie",
+    "\\ProjectCinema.infrastructure"
+  ],
+  "SelectedNode": "\\ProjectCinema.domain\\Query\\Dtos\\MovieDetailsDto.cs",
+  "PreviewInSolutionExplorer": false
+}

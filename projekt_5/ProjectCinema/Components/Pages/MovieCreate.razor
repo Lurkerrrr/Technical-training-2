@@ -1,0 +1,56 @@
+﻿@rendermode InteractiveServer
+@page "/create-movie"
+@using MediatR
+@inject IMediator Mediator
+
+<h3 class="mt-4">Dodanie Filmu</h3>
+<hr />
+
+<EditForm Model="@Model" OnInvalidSubmit="HandleValidSubmit" FormName="CreateMovieForm">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <div class="mb-3">
+        <label class="form-label">Nazwa Filmu</label>
+        <InputText @bind-Value="Model.Name" class="form-control" placeholder="np. Matrix" />
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Rok Produkcji</label>
+        <InputNumber @bind-Value="Model.Year" class="form-control" placeholder="np. 1999" />
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Czas Seansu (minuty)</label>
+        <InputNumber @bind-Value="Model.SeanceTime" class="form-control" placeholder="np. 120" />
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Kategoria</label>
+        <InputSelect @bind-Value="Model.MovieCategoryId" class="form-select">
+            <option value="">-- Wybierz kategorię --</option>
+            @foreach (var category in Categories)
+            {
+                <option value="@category.Id">@category.Name</option>    
+            }
+        </InputSelect>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Dodaj Film</button>
+</EditForm>
+
+@if (!string.IsNullOrEmpty(SuccessMessage))
+{
+    <div class="alert alert-success mt-3">@SuccessMessage</div>    
+}
+@if (ValidationErrors.Any())
+{
+    <div class="alert alert-danger mt-3">
+        <ul>
+            @foreach (var error in ValidationErrors)
+            {
+                <li><strong>@error.PropertyName</strong>: @error.Message</li>
+            }
+        </ul>
+    </div>    
+}
