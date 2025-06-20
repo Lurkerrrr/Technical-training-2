@@ -1,0 +1,47 @@
+﻿@page "/movies"
+@rendermode InteractiveServer
+@using MediatR
+@using ProjectCinema.domain.Query.Dtos
+@using Microsoft.AspNetCore.Components.QuickGrid
+@inject IMediator Mediator
+
+<h3>Lista Filmów</h3>
+
+@if (MovieList is null)
+{
+    <p><en>Ładowanie danych...</en></p>
+}
+else if (!MovieList.Any())
+{
+    <p>Brak dostępnych filmów</p>
+}
+else
+{
+    <QuickGrid TGridItem="MovieDto"
+        Items="MovieList.AsQueryable()"
+        Class="table table-hover table-bordered table-striped align-middle text-center shadow-sm rounded"
+        Striping="true"
+        Gridlines="Both">
+    <PropertyColumn TGridItem="MovieDto" TProp="long" Property="m => m.Id" Title="ID" />
+    <PropertyColumn TGridItem="MovieDto" TProp="string" Property="m => m.Name" Title="Nazwa filmu" />
+    
+            <TemplateColumn Title="Akcje">
+                <TemplateContext>
+                    @{
+                        var movie = context;
+                    }
+                    <div class="d-flex justify-content-center gap-2">
+                        <button class="btn btn-sm btn-primary" title="Edytuj">
+                            <i class="bi bi-pencil"></i>
+                        </button>
+                        <button class="btn btn-sm btn-danger" title="Usuń" @onclick="() => DeleteMovie(movie.Id)">
+                            <i class="bi bi-trash"></i>
+                        </button>
+                        <button class="btn btn-sm btn-success" title="Szczegóły" @onclick="() => GoToDetails(movie.Id)">
+                            <i class="bi bi-search"></i>
+                        </button>
+                    </div>
+                </TemplateContext>
+            </TemplateColumn>
+    </QuickGrid>
+}

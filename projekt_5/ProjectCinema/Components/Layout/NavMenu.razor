@@ -1,0 +1,47 @@
+﻿<div class="top-row navbar navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/">🎬 CinemaApp</a>
+    </div>
+</div>
+
+<div class="sidebar bg-light">
+    <nav class="flex-column p-3">
+        <NavLink class="nav-link mb-2" href="/" Match="NavLinkMatch.All">
+            🏠 Strona główna
+        </NavLink>
+
+        <NavLink class="nav-link mb-2" href="/movies">
+            🎥 Lista filmów
+        </NavLink>
+
+        <NavLink class="nav-link mb-2" href="/create-movie">
+            ➕ Dodaj nowy film
+        </NavLink>
+        <NavLink class="nav-link mb-2" href="/test-form">
+            ➕ Test
+        </NavLink>
+    </nav>
+</div>
+
+<style>
+    .sidebar {
+        height: 100vh;
+        width: 250px;
+        position: fixed;
+        top: 56px; /* wysokość top-row */
+        left: 0;
+        overflow-x: hidden;
+        padding-top: 1rem;
+        border-right: 1px solid #ccc;
+    }
+
+    .nav-link {
+        font-size: 1.1rem;
+        color: #333;
+    }
+
+    .nav-link.active {
+        font-weight: bold;
+        color: #0d6efd;
+    }
+</style>
