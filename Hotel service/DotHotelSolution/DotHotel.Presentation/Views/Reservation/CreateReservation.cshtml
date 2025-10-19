@@ -1,0 +1,257 @@
+﻿@using DotHotel.Core.DataTransferObjects.ReservationObjects
+@model ReservationAddRequest
+@{
+    ViewData["Title"] = "Create Reservation";
+    Layout = "_Layout";
+}
+
+<div class="container mt-3">
+    <div class="row mb-4">
+        <div class="col-12">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item">
+                        <a asp-controller="Apartment" asp-action="Index">Apartments</a>
+                    </li>
+                    <li class="breadcrumb-item">
+                        <a asp-controller="Apartment" asp-action="Details" asp-route-apartmentId="@Model.ApartmentId">Apartment Details</a>
+                    </li>
+                    <li class="breadcrumb-item active">Book Now</li>
+                </ol>
+            </nav>
+            <h1 class="h2">Book Your Stay</h1>
+            <p class="text-muted">Complete your reservation details</p>
+        </div>
+    </div>
+
+    <form asp-controller="Reservation" asp-action="CreateReservation" method="post">
+        @Html.HiddenFor(m => m.ReservationHolderId)
+        @Html.HiddenFor(m => m.ApartmentId)
+
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="card border-0 shadow-sm mb-4">
+                    <div class="card-header bg-white">
+                        <h5 class="mb-0">
+                            <i class="fas fa-calendar-alt me-2"></i>Reservation Details
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label asp-for="CheckInDate" class="form-label">
+                                    <i class="fas fa-calendar-check me-1"></i>Check-in Date
+                                </label>
+                                <input asp-for="CheckInDate" class="form-control" name="CheckInDate"
+                                       value="@(Model.CheckInDate.HasValue? Model.CheckInDate.Value.ToString("yyyy-MM-dd") : "")" />
+                                <span asp-validation-for="CheckInDate" class="text-danger small"></span>
+                                <small class="text-muted">Earliest check-in: Today</small>
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+                                <label asp-for="CheckOutDate" class="form-label">
+                                    <i class="fas fa-calendar-times me-1"></i>Check-out Date
+                                </label>
+                                <input asp-for="CheckOutDate" class="form-control" name="CheckOutDate"
+                                       value="@(Model.CheckOutDate.HasValue? Model.CheckOutDate.Value.ToString("yyyy-MM-dd") : "")" />
+                                <span asp-validation-for="CheckOutDate" class="text-danger small"></span>
+                                <small class="text-muted">Must be at least 1 day after check-in</small>
+                            </div>
+                        </div>
+
+
+
+                        <div class="row">
+                            <div class="col-md-12 mb-3">
+                                <label asp-for="GuestCount" class="form-label">
+                                    <i class="fas fa-users me-1"></i>Number of Guests
+                                </label>
+                                <input asp-for="GuestCount" type="number" class="form-control" min="1" max="@Model.Apartment.Capacity" placeholder="Number of guests" />
+                                <span asp-validation-for="GuestCount" class="text-danger small"></span>
+                                <small class="text-muted">Maximum capacity: @Model.Apartment.Capacity guests</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card border-0 shadow-sm mb-4">
+                    <div class="card-header bg-white">
+                        <h5 class="mb-0">
+                            <i class="fas fa-info-circle me-2"></i>Booking Information
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="alert alert-info">
+                            <i class="fas fa-lightbulb me-2"></i>
+                            <strong>Important:</strong> Please review your dates and guest count carefully.
+                            Changes may not be possible after booking confirmation.
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h6 class="mb-2">What's included:</h6>
+                                <ul class="list-unstyled">
+                                    <li><i class="fas fa-wifi text-primary me-2"></i>Free WiFi</li>
+                                    <li><i class="fas fa-parking text-primary me-2"></i>Parking</li>
+                                    <li><i class="fas fa-tv text-primary me-2"></i>TV & Entertainment</li>
+                                    <li><i class="fas fa-snowflake text-primary me-2"></i>Air Conditioning</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <h6 class="mb-2">Policies:</h6>
+                                <ul class="list-unstyled text-muted small">
+                                    <li>• Check-in: 3:00 PM - 11:00 PM</li>
+                                    <li>• Check-out: 11:00 AM</li>
+                                    <li>• No smoking allowed</li>
+                                    <li>• Pets allowed (additional fee may apply)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="card border-0 shadow-lg position-sticky" style="top: 2rem;">
+                    <div class="card-body p-4">
+                        <div class="text-center mb-4">
+                            <h3 class="text-primary mb-1">
+                                $<span id="price-per-night">@Model.Apartment.PricePerNightPerPersonUsd</span>
+                                <small class="text-muted fs-6">/ person / night</small>
+                            </h3>
+                        </div>
+
+                        <div class="mb-4">
+                            <h5 class="mb-3">Price Breakdown</h5>
+
+                            <div class="d-flex justify-content-between mb-2">
+                                <span class="text-muted">Rate per person per night</span>
+                                <span>$<span id="rate-display">@Model.Apartment.PricePerNightPerPersonUsd</span></span>
+                            </div>
+
+                            <div class="d-flex justify-content-between mb-2" id="calculation-row" style="display: none !important;">
+                                <span class="text-muted">
+                                    <span id="guests-calc">1</span> guests × <span id="nights-calc">1</span> nights
+                                </span>
+                                <span>$<span id="subtotal-calc">0</span></span>
+                            </div>
+
+                            <hr class="my-3">
+
+                            <div class="d-flex justify-content-between fw-bold fs-5">
+                                <span>Total</span>
+                                <span class="text-success">$<span id="total-price">0.00</span></span>
+                            </div>
+                        </div>
+
+                        <div class="d-grid mb-3">
+                            <button type="submit" class="btn btn-primary btn-lg" id="book-button">
+                                <i class="fas fa-credit-card me-2"></i>Reserve Now
+                            </button>
+                        </div>
+
+                        <div class="text-center">
+                            <small class="text-muted">
+                                <i class="fas fa-shield-alt me-1"></i>
+                                Secure booking • No booking fees
+                            </small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    <partial name="_ClientSideValidationScriptsPartial" />
+
+    <script>
+        $(document).ready(function() {
+            $('#CheckInDate').on('change', function () {
+                $('#CheckInDate').valid();
+
+                $('#CheckOutDate').valid();
+            });
+
+            $('#CheckOutDate').on('change', function () {
+                $('#CheckOutDate').valid();
+
+                $('#CheckInDate').valid();
+            });
+
+
+            function getActualPrice() {
+                var formIsValid = $('form').valid();
+                if (!formIsValid) {
+                    $('#total-price').text('—');
+                    return;
+                }
+
+                var checkInDate = $('#CheckInDate').val();
+                var checkOutDate = $('#CheckOutDate').val();
+                var guestCount = $('#GuestCount').val();
+                var apartmentId = '@Model.ApartmentId';
+
+                if (checkInDate && checkOutDate && guestCount) {
+                    var requestData = {
+                        ApartmentId: apartmentId,
+                        CheckInDate: checkInDate,
+                        CheckOutDate: checkOutDate,
+                        GuestCount: guestCount
+                    };
+
+                    $.ajax({
+                        url: '/pricing/calculate-price',
+                        type: 'POST',
+                        contentType: 'application/json',
+                        data: JSON.stringify(requestData),
+                        success: function(response) {
+                            $('#total-price').text(response.totalPriceUsd.toFixed(2));
+                        },
+                        error: function() {
+                            $('#total-price').text('Error calculating price');
+                        }
+                    });
+                }
+            }
+
+            $('#CheckInDate, #CheckOutDate, #GuestCount').on('change input', function() {
+                getActualPrice();
+            });
+
+            getActualPrice();
+        });
+
+
+    </script>
+
+    <style>
+        .position-sticky {
+            top: 2rem !important;
+        }
+
+        @@media (max-width: 992px) {
+            .position-sticky
+        {
+            position: static !important;
+        }
+
+        }
+
+        .alert-info {
+            border-left: 4px solid var(--info-color);
+            background-color: rgba(2, 132, 199, 0.1);
+        }
+
+        #book-button:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        .form-control:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 0.2rem rgba(30, 58, 138, 0.25);
+        }
+    </style>
+}

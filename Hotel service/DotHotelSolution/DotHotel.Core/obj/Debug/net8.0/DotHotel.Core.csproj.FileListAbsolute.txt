@@ -1,0 +1,24 @@
+C:\Users\user\Desktop\w68166\DotHotelSolution\DotHotel.Core\bin\Debug\net8.0\DotHotel.Core.deps.json
+C:\Users\user\Desktop\w68166\DotHotelSolution\DotHotel.Core\bin\Debug\net8.0\DotHotel.Core.dll
+C:\Users\user\Desktop\w68166\DotHotelSolution\DotHotel.Core\bin\Debug\net8.0\DotHotel.Core.pdb
+C:\Users\user\Desktop\w68166\DotHotelSolution\DotHotel.Core\obj\Debug\net8.0\DotHotel.Core.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\w68166\DotHotelSolution\DotHotel.Core\obj\Debug\net8.0\DotHotel.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Desktop\w68166\DotHotelSolution\DotHotel.Core\obj\Debug\net8.0\DotHotel.Core.AssemblyInfoInputs.cache
+C:\Users\user\Desktop\w68166\DotHotelSolution\DotHotel.Core\obj\Debug\net8.0\DotHotel.Core.AssemblyInfo.cs
+C:\Users\user\Desktop\w68166\DotHotelSolution\DotHotel.Core\obj\Debug\net8.0\DotHotel.Core.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\w68166\DotHotelSolution\DotHotel.Core\obj\Debug\net8.0\DotHotel.Core.dll
+C:\Users\user\Desktop\w68166\DotHotelSolution\DotHotel.Core\obj\Debug\net8.0\refint\DotHotel.Core.dll
+C:\Users\user\Desktop\w68166\DotHotelSolution\DotHotel.Core\obj\Debug\net8.0\DotHotel.Core.pdb
+C:\Users\user\Desktop\w68166\DotHotelSolution\DotHotel.Core\obj\Debug\net8.0\ref\DotHotel.Core.dll
+C:\Users\user\Desktop\Hotel service\DotHotelSolution\DotHotel.Core\bin\Debug\net8.0\DotHotel.Core.deps.json
+C:\Users\user\Desktop\Hotel service\DotHotelSolution\DotHotel.Core\bin\Debug\net8.0\DotHotel.Core.dll
+C:\Users\user\Desktop\Hotel service\DotHotelSolution\DotHotel.Core\bin\Debug\net8.0\DotHotel.Core.pdb
+C:\Users\user\Desktop\Hotel service\DotHotelSolution\DotHotel.Core\obj\Debug\net8.0\DotHotel.Core.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\Hotel service\DotHotelSolution\DotHotel.Core\obj\Debug\net8.0\DotHotel.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Desktop\Hotel service\DotHotelSolution\DotHotel.Core\obj\Debug\net8.0\DotHotel.Core.AssemblyInfoInputs.cache
+C:\Users\user\Desktop\Hotel service\DotHotelSolution\DotHotel.Core\obj\Debug\net8.0\DotHotel.Core.AssemblyInfo.cs
+C:\Users\user\Desktop\Hotel service\DotHotelSolution\DotHotel.Core\obj\Debug\net8.0\DotHotel.Core.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\Hotel service\DotHotelSolution\DotHotel.Core\obj\Debug\net8.0\DotHotel.Core.dll
+C:\Users\user\Desktop\Hotel service\DotHotelSolution\DotHotel.Core\obj\Debug\net8.0\refint\DotHotel.Core.dll
+C:\Users\user\Desktop\Hotel service\DotHotelSolution\DotHotel.Core\obj\Debug\net8.0\DotHotel.Core.pdb
+C:\Users\user\Desktop\Hotel service\DotHotelSolution\DotHotel.Core\obj\Debug\net8.0\ref\DotHotel.Core.dll

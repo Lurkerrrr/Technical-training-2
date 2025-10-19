@@ -1,0 +1,98 @@
+﻿@using DotHotel.Core.DataTransferObjects.ApartmentObjects
+@using DotHotel.Core.Enums
+
+@model ApartmentSearchOptions
+
+<div class="card border-0 shadow-sm mb-4">
+    <div class="card-header bg-white">
+        <h5 class="mb-0">
+            <i class="fas fa-filter me-2"></i>Filter & Sort
+        </h5>
+    </div>
+    <div class="card-body">
+        <form asp-action="Index" method="get" class="row g-3">
+            <div class="col-12">
+                <h6 class="text-muted mb-2">
+                    <i class="fas fa-calendar me-1"></i>Availability Dates
+                </h6>
+            </div>
+            <div class="col-md-6">
+                <label asp-for="Filter.AvailableFrom" class="form-label">Available From</label>
+                <input asp-for="Filter.AvailableFrom" type="date" class="form-control" />
+                <span asp-validation-for="Filter.AvailableFrom" class="text-danger small"></span>
+            </div>
+            <div class="col-md-6">
+                <label asp-for="Filter.AvailableTo" class="form-label">Available To</label>
+                <input asp-for="Filter.AvailableTo" type="date" class="form-control" />
+                <span asp-validation-for="Filter.AvailableTo" class="text-danger small"></span>
+            </div>
+
+            <div class="col-12 mt-4">
+                <h6 class="text-muted mb-2">
+                    <i class="fas fa-sliders-h me-1"></i>Property Filters
+                </h6>
+            </div>
+            <div class="col-md-4">
+                <label asp-for="Filter.MinPrice" class="form-label">Price Range (per night)</label>
+                <div class="row g-2">
+                    <div class="col-6">
+                        <input asp-for="Filter.MinPrice" class="form-control" placeholder="Min $" step="0.01" min="0" />
+                        <span asp-validation-for="Filter.MinPrice" class="text-danger small"></span>
+                    </div>
+                    <div class="col-6">
+                        <input asp-for="Filter.MaxPrice" class="form-control" placeholder="Max $" step="0.01" min="0" />
+                        <span asp-validation-for="Filter.MaxPrice" class="text-danger small"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <label asp-for="Filter.MinGuests" class="form-label">Minimum Guests</label>
+                <input asp-for="Filter.MinGuests" class="form-control" placeholder="Guests" min="1" />
+                <span asp-validation-for="Filter.MinGuests" class="text-danger small"></span>
+            </div>
+            <div class="col-md-4">
+                <label asp-for="Filter.MinRating" class="form-label">Minimum Rating</label>
+                <select asp-for="Filter.MinRating" class="form-select">
+                    <option value="">Any Rating</option>
+                    <option value="1">1+ Stars</option>
+                    <option value="2">2+ Stars</option>
+                    <option value="3">3+ Stars</option>
+                    <option value="4">4+ Stars</option>
+                    <option value="5">5 Stars</option>
+                </select>
+                <span asp-validation-for="Filter.MinRating" class="text-danger small"></span>
+            </div>
+
+            <div class="col-12 mt-4">
+                <h6 class="text-muted mb-2">
+                    <i class="fas fa-sort me-1"></i>Sort & Display Options
+                </h6>
+            </div>
+            <div class="col-md-3">
+                <label asp-for="SortBy" class="form-label">Sort By</label>
+                <select asp-for="SortBy" asp-items="Html.GetEnumSelectList<ApartmentSortOptions>()" class="form-select"></select>
+                <span asp-validation-for="SortBy" class="text-danger small"></span>
+            </div>
+            <div class="col-md-3">
+                <label asp-for="SortOrder" class="form-label">Sort Order</label>
+                <select asp-for="SortOrder" asp-items="Html.GetEnumSelectList<SortOrderOptions>()" class="form-select"></select>
+                <span asp-validation-for="SortOrder" class="text-danger small"></span>
+            </div>
+            <div class="col-md-3">
+                <label asp-for="PageNumber" class="form-label">Page Number</label>
+                <input asp-for="PageNumber" class="form-control" min="1" />
+                <span asp-validation-for="PageNumber" class="text-danger small"></span>
+            </div>
+            <div class="col-md-3 d-flex align-items-end">
+                <div class="d-grid gap-2 w-100">
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-search me-1"></i>Apply Filters
+                    </button>
+                    <a asp-action="Index" class="btn btn-outline-secondary">
+                        <i class="fas fa-undo me-1"></i>Reset
+                    </a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

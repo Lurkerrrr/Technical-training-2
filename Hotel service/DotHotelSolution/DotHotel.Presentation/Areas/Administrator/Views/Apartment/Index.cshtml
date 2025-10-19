@@ -1,0 +1,196 @@
+﻿@using DotHotel.Core.DataTransferObjects.ApartmentObjects
+@model List<ApartmentResponse>
+@{
+    ViewData["Title"] = "Manage Apartments";
+    Layout = "_Layout";
+    var searchOptions = ViewBag.SearchOptions as ApartmentSearchOptions ?? new ApartmentSearchOptions();
+}
+
+<div class="container mt-3">
+    <div class="row mb-4">
+        <div class="col-12">
+            <div class="d-flex justify-content-between align-items-center">
+                <div>
+                    <h1 class="h2 mb-2">Manage Apartments</h1>
+                    <p class="text-muted">Total apartments: @Model.Count</p>
+                </div>
+                <div>
+                    <a asp-area="Administrator" asp-controller="Apartment" asp-action="CreateApartment" class="btn btn-primary">
+                        <i class="fas fa-plus me-2"></i>Add New Apartment
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <partial name="Partial/_ApartmentSearchOptions" model="searchOptions" />
+
+    <div class="row">
+        <div class="col-12">
+            @if (Model.Any())
+            {
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body p-0">
+                        @foreach (var apartment in Model)
+                        {
+                            <div class="apartment-admin-item border-bottom p-3">
+                                <div class="row align-items-center">
+                                    <div class="col-md-2">
+                                        @if (apartment.ApartmentImagesBase64?.Any() == true)
+                                        {
+                                            <img src="@apartment.ApartmentImagesBase64.First()" 
+                                                 class="img-fluid rounded shadow-sm" 
+                                                 alt="@apartment.Name"
+                                                 style="height: 80px; width: 120px; object-fit: cover;">
+                                        }
+                                        else
+                                        {
+                                            <div class="bg-light rounded d-flex align-items-center justify-content-center shadow-sm"
+                                                 style="height: 80px; width: 120px;">
+                                                <i class="fas fa-home fa-2x text-muted"></i>
+                                            </div>
+                                        }
+                                    </div>
+
+                                    <div class="col-md-7">
+                                        <div class="d-flex align-items-start">
+                                            <div class="flex-grow-1">
+                                                <h5 class="mb-1">
+                                                    @apartment.Name
+                                                    @if (!apartment.IsActive)
+                                                    {
+                                                        <span class="badge bg-danger ms-2">Inactive</span>
+                                                    }
+                                                    else
+                                                    {
+                                                        <span class="badge bg-success ms-2">Active</span>
+                                                    }
+                                                </h5>
+                                                <p class="text-muted mb-2 small">
+                                                    @if (apartment.Description.Length > 100)
+                                                    {
+                                                        @(apartment.Description.Substring(0, 100) + "...")
+                                                    }
+                                                    else
+                                                    {
+                                                        @apartment.Description
+                                                    }
+                                                </p>
+                                                <div class="d-flex gap-4 text-muted small">
+                                                    <span>
+                                                        <i class="fas fa-dollar-sign me-1"></i>
+                                                        <strong>@apartment.PricePerNightPerPersonUsd</strong>/night
+                                                    </span>
+                                                    <span>
+                                                        <i class="fas fa-users me-1"></i>
+                                                        <strong>@apartment.Capacity</strong> guests
+                                                    </span>
+                                                    <span>
+                                                        <i class="fas fa-star text-warning me-1"></i>
+                                                        <strong>@apartment.Rating</strong>/5
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-3">
+                                        <div class="d-flex gap-2 justify-content-end">
+                                            <a asp-area="Administrator" asp-controller="Apartment" asp-action="Details" asp-route-apartmentId="@apartment.Id" 
+                                               class="btn btn-sm btn-outline-primary" 
+                                               title="View Details">
+                                                <i class="fas fa-eye"></i>
+                                            </a>
+                                            <a asp-area="Administrator" asp-controller="Apartment" asp-action="UpdateApartment" asp-route-apartmentId="@apartment.Id" 
+                                               class="btn btn-sm btn-outline-secondary" 
+                                               title="Edit">
+                                                <i class="fas fa-edit"></i>
+                                            </a>
+                                            <button type="button" 
+                                                    class="btn btn-sm btn-outline-danger" 
+                                                    title="Delete"
+                                                    onclick="confirmDelete('@apartment.Id', '@apartment.Name')">
+                                                <i class="fas fa-trash"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+            }
+            else
+            {
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body text-center py-5">
+                        <i class="fas fa-building fa-4x text-muted mb-4"></i>
+                        <h4>No apartments found</h4>
+                        <p class="text-muted mb-4">Get started by adding your first apartment</p>
+                        <a asp-area="Administrator" asp-controller="Apartment" asp-action="CreateApartment" class="btn btn-primary">
+                            <i class="fas fa-plus me-2"></i>Add First Apartment
+                        </a>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="deleteModalLabel">Confirm Delete</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Are you sure you want to delete "<strong id="deleteApartmentName"></strong>"?</p>
+                <p class="text-muted small">This action cannot be undone.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <a id="deleteButton" asp-area="Administrator" asp-controller="Apartment" asp-action="DeleteApartment" asp-route-apartmentId="@Guid.Empty" class="btn btn-danger">
+                    <i class="fas fa-trash me-2"></i>Delete
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        function confirmDelete(apartmentId, apartmentName) {
+            let hrefTemplate = $("#deleteButton").attr("href");
+
+            let emptyGuid = "00000000-0000-0000-0000-000000000000";
+
+            let realHref = hrefTemplate.replace(emptyGuid, apartmentId);
+
+            $("#deleteButton").attr("href", realHref);
+            $("#deleteApartmentName").text(apartmentName);
+
+            var deleteModal = new bootstrap.Modal(document.getElementById('deleteModal'));
+            deleteModal.show();
+        }
+    </script>
+
+    <style>
+        .apartment-admin-item {
+            transition: background-color 0.2s ease;
+        }
+        
+        .apartment-admin-item:hover {
+            background-color: var(--bg-tertiary);
+        }
+        
+        .apartment-admin-item:last-child {
+            border-bottom: none !important;
+        }
+
+        .btn-sm {
+            padding: 0.375rem 0.75rem;
+            font-size: 0.875rem;
+        }
+    </style>
+}

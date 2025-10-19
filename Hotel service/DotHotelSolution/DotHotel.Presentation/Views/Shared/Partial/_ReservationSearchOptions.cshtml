@@ -1,0 +1,72 @@
+﻿@using DotHotel.Core.DataTransferObjects.ReservationObjects
+@using DotHotel.Core.Enums
+
+@model ReservationSearchOptions
+
+<div class="card border-0 shadow-sm mb-4">
+    <div class="card-header bg-white">
+        <h5 class="mb-0">
+            <i class="fas fa-filter me-2"></i>Filter & Sort
+        </h5>
+    </div>
+    <div class="card-body">
+        <form asp-action="Index" method="get" class="row g-3">
+            <input type="hidden" asp-for="Filter.ReservationHolderId" />
+
+            <div class="col-12">
+                <h6 class="text-muted mb-2">
+                    <i class="fas fa-sliders-h me-1"></i>Reservation Filters
+                </h6>
+            </div>
+            <div class="col-md-6">
+                <label asp-for="Filter.ReservationStatus" class="form-label">Reservation Status</label>
+                <select asp-for="Filter.ReservationStatus" class="form-select">
+                    <option value="">All Statuses</option>
+                    <option value="@ReservationStatus.Pending">Pending</option>
+                    <option value="@ReservationStatus.Confirmed">Confirmed</option>
+                    <option value="@ReservationStatus.CheckedIn">Checked In</option>
+                    <option value="@ReservationStatus.CheckedOut">Checked Out</option>
+                    <option value="@ReservationStatus.Cancelled">Cancelled</option>
+                </select>
+            </div>
+            <div class="col-md-6">
+                <label asp-for="Filter.PaymentMethod" class="form-label">Payment Method</label>
+                <select asp-for="Filter.PaymentMethod" class="form-select">
+                    <option value="">All Payment Methods</option>
+                    <option value="@PaymentMethod.BLIK">BLIK</option>
+                    <option value="@PaymentMethod.GooglePay">Google Pay</option>
+                    <option value="@PaymentMethod.Cash">Cash</option>
+                    <option value="@PaymentMethod.None">Not paid yet</option>
+                </select>
+            </div>
+
+            <div class="col-12 mt-4">
+                <h6 class="text-muted mb-2">
+                    <i class="fas fa-sort me-1"></i>Sort & Display Options
+                </h6>
+            </div>
+            <div class="col-md-3">
+                <label asp-for="SortBy" class="form-label">Sort By</label>
+                <select asp-for="SortBy" asp-items="Html.GetEnumSelectList<ReservationSortOptions>()" class="form-select"></select>
+            </div>
+            <div class="col-md-3">
+                <label asp-for="SortOrder" class="form-label">Sort Order</label>
+                <select asp-for="SortOrder" asp-items="Html.GetEnumSelectList<SortOrderOptions>()" class="form-select"></select>
+            </div>
+            <div class="col-md-3">
+                <label asp-for="PageNumber" class="form-label">Page Number</label>
+                <input asp-for="PageNumber" class="form-control" min="1" />
+            </div>
+            <div class="col-md-3 d-flex align-items-end">
+                <div class="d-grid gap-2 w-100">
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-search me-1"></i>Apply Filters
+                    </button>
+                    <a asp-action="Index" class="btn btn-outline-secondary">
+                        <i class="fas fa-undo me-1"></i>Reset
+                    </a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

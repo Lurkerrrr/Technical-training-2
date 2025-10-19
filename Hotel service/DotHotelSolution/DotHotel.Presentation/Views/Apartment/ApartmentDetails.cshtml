@@ -1,0 +1,195 @@
+﻿@using DotHotel.Core.DataTransferObjects.ApartmentObjects
+@model ApartmentResponse
+@{
+    ViewData["Title"] = Model.Name;
+    Layout = "_Layout";
+}
+
+<div class="container mt-3">
+    <nav aria-label="breadcrumb" class="mb-4">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a asp-controller="Apartment" asp-action="Index">Apartments</a>
+            </li>
+            <li class="breadcrumb-item active">@Model.Name</li>
+        </ol>
+    </nav>
+
+    <div class="row g-4">
+        <div class="col-lg-8">
+            <div class="mb-4">
+                <div id="mainImageContainer">
+                    @if (Model.ApartmentImagesBase64.Any())
+                    {
+                        <img id="mainImage" src="@Model.ApartmentImagesBase64.First()"
+                             class="img-fluid rounded shadow"
+                             alt="@Model.Name"
+                             style="width: 100%; height: 400px; object-fit: cover;" />
+                    }
+                    else
+                    {
+                        <div class="bg-light rounded shadow d-flex align-items-center justify-content-center"
+                             style="height: 400px;">
+                            <div class="text-center text-muted">
+                                <i class="fas fa-home fa-4x mb-3"></i>
+                                <p>No images available</p>
+                            </div>
+                        </div>
+                    }
+                </div>
+                <div id="thumbnailContainer" class="d-flex justify-content-start mt-3">
+                    @foreach (var image in Model.ApartmentImagesBase64)
+                    {
+                        <img src="@image"
+                             class="img-thumbnail me-2"
+                             style="cursor: pointer; width: 100px; height: 100px; object-fit: cover;"
+                             data-image-src="@image" />
+                    }
+                </div>
+            </div>
+
+            <div class="card border-0 shadow-sm">
+                <div class="card-body">
+                    <h3 class="card-title mb-3">About this apartment</h3>
+                    <p class="card-text text-muted">@Model.Description</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4">
+            <div class="card border-0 shadow-lg position-sticky" style="top: 2rem;">
+                <div class="card-body p-4">
+                    <div class="text-center mb-4">
+                        <h2 class="text-primary mb-1">
+                            $@Model.PricePerNightPerPersonUsd
+                            <small class="text-muted fs-6">/ person / night</small>
+                        </h2>
+                    </div>
+
+                    <div class="mb-4">
+                        <h5 class="mb-3">Apartment Details</h5>
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span class="text-muted">
+                                <i class="fas fa-users me-2"></i>Capacity
+                            </span>
+                            <span class="fw-semibold">@Model.Capacity guests</span>
+                        </div>
+
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span class="text-muted">
+                                <i class="fas fa-star me-2"></i>Rating
+                            </span>
+                            <span class="fw-semibold">
+                                @if (Model.Rating > 0)
+                                {
+                                    <span>@Model.Rating</span>
+                                    <i class="fas fa-star text-warning ms-1"></i>
+                                }
+                                else
+                                {
+                                    <span class="text-muted">No rating yet</span>
+                                }
+                            </span>
+                        </div>
+
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="text-muted">
+                                <i class="fas fa-check-circle me-2"></i>Status
+                            </span>
+                            <span class="fw-semibold">
+                                @if (Model.IsActive)
+                                {
+                                    <span class="text-success">Available</span>
+                                }
+                                else
+                                {
+                                    <span class="text-danger">Unavailable</span>
+                                }
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="d-grid mb-3">
+                        @if (Model.IsActive)
+                        {
+                            @if (User.Identity != null && User.Identity.IsAuthenticated)
+                            {
+                                <a asp-controller="Reservation" asp-action="CreateReservation" asp-route-apartmentId="@Model.Id" class="btn btn-primary btn-lg">
+                                    <i class="fas fa-calendar-plus me-2"></i>Book Now
+                                </a>
+                            }
+                            else
+                            {
+                                <a asp-controller="Account" asp-action="Login" class="btn btn-primary btn-lg">
+                                    <i class="fas fa-sign-in-alt me-2"></i>Login to Book
+                                </a>
+                            }
+                        }
+                        else
+                        {
+                            <button class="btn btn-secondary btn-lg" disabled>
+                                <i class="fas fa-times me-2"></i>Currently Unavailable
+                            </button>
+                        }
+                    </div>
+
+                    <div class="text-center">
+                        <small class="text-muted">
+                            <i class="fas fa-shield-alt me-1"></i>
+                            Secure booking • No booking fees
+                        </small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card border-0 shadow-sm mt-4">
+                <div class="card-body">
+                    <h6 class="card-title mb-3">What's included</h6>
+                    <div class="row g-2">
+                        <div class="col-6">
+                            <small class="text-muted">
+                                <i class="fas fa-wifi me-2 text-primary"></i>Free WiFi
+                            </small>
+                        </div>
+                        <div class="col-6">
+                            <small class="text-muted">
+                                <i class="fas fa-parking me-2 text-primary"></i>Parking
+                            </small>
+                        </div>
+                        <div class="col-6">
+                            <small class="text-muted">
+                                <i class="fas fa-tv me-2 text-primary"></i>TV
+                            </small>
+                        </div>
+                        <div class="col-6">
+                            <small class="text-muted">
+                                <i class="fas fa-snowflake me-2 text-primary"></i>AC
+                            </small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-5">
+        <div class="col-12">
+            <div class="text-center">
+                <a asp-controller="Apartment" asp-action="Index" class="btn btn-outline-primary">
+                    <i class="fas fa-arrow-left me-2"></i>Back to All Apartments
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        $(document).ready(function() {
+            $('#thumbnailContainer img').on('click', function() {
+                var newImageSrc = $(this).data('image-src');
+                $('#mainImage').attr('src', newImageSrc);
+            });
+        });
+    </script>
+}

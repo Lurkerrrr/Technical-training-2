@@ -1,0 +1,293 @@
+﻿@using DotHotel.Core.DataTransferObjects.ReservationObjects
+@using DotHotel.Core.Enums
+
+@model ReservationResponse
+@{
+    ViewData["Title"] = $"Reservation {"to" + Model.Apartment}";
+    Layout = "_Layout";
+}
+
+<div class="container mt-3">
+    <nav aria-label="breadcrumb" class="mb-4">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a asp-controller="Reservation" asp-action="Index">My Reservations</a>
+            </li>
+            <li class="breadcrumb-item active">Reservation Details</li>
+        </ol>
+    </nav>
+
+    <div class="row g-4">
+        <div class="col-lg-8">
+            <div class="mb-4">
+                @if (Model.Apartment.ApartmentImagesBase64?.Any() == true)
+                {
+                    <img src="@Model.Apartment.ApartmentImagesBase64.First()"
+                         class="img-fluid rounded shadow"
+                         alt="@Model.Apartment.Name"
+                         style="width: 100%; height: 400px; object-fit: cover;" />
+                }
+                else
+                {
+                    <div class="bg-light rounded shadow d-flex align-items-center justify-content-center"
+                         style="height: 400px;">
+                        <div class="text-center text-muted">
+                            <i class="fas fa-home fa-4x mb-3"></i>
+                            <p>No images available</p>
+                        </div>
+                    </div>
+                }
+            </div>
+
+            <div class="card border-0 shadow-sm mb-4">
+                <div class="card-body">
+                    <h3 class="card-title mb-3">About this apartment</h3>
+                    <p class="card-text text-muted">@Model.Apartment.Description</p>
+                </div>
+            </div>
+
+            <div class="card border-0 shadow-sm">
+                <div class="card-body">
+                    <h3 class="card-title mb-3">Reservation Details</h3>
+
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <h5 class="mb-3">Stay Information</h5>
+
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <span class="text-muted">
+                                    <i class="fas fa-calendar-check me-2"></i>Check-in
+                                </span>
+                                <span class="fw-semibold">@Model.CheckInDate.ToString("MMM dd, yyyy")</span>
+                            </div>
+
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <span class="text-muted">
+                                    <i class="fas fa-calendar-times me-2"></i>Check-out
+                                </span>
+                                <span class="fw-semibold">@Model.CheckOutDate.ToString("MMM dd, yyyy")</span>
+                            </div>
+
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <span class="text-muted">
+                                    <i class="fas fa-moon me-2"></i>Duration
+                                </span>
+                                <span class="fw-semibold">@((Model.CheckOutDate - Model.CheckInDate).Days) nights</span>
+                            </div>
+
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="text-muted">
+                                    <i class="fas fa-users me-2"></i>Guests
+                                </span>
+                                <span class="fw-semibold">@Model.GuestCount people</span>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <h5 class="mb-3">Booking Information</h5>
+
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <span class="text-muted">
+                                    <i class="fas fa-hashtag me-2"></i>Reservation ID
+                                </span>
+                                <span class="fw-semibold font-monospace">#@Model.Id.ToString().Substring(0, 8).ToUpper()</span>
+                            </div>
+
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <span class="text-muted">
+                                    <i class="fas fa-user me-2"></i>Guest Name
+                                </span>
+                                <span class="fw-semibold">@Model.ReservationHolder.UserName</span>
+                            </div>
+
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <span class="text-muted">
+                                    <i class="fas fa-envelope me-2"></i>Email
+                                </span>
+                                <span class="fw-semibold">@Model.ReservationHolder.Email</span>
+                            </div>
+
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="text-muted">
+                                    <i class="fas fa-credit-card me-2"></i>Payment Method
+                                </span>
+                                <span class="fw-semibold">@Model.PaymentMethod</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4">
+            <div class="card border-0 shadow-lg" style="top: 2rem;">
+                <div class="card-body p-4">
+                    <div class="text-center mb-4">
+                        <h2 class="text-success mb-1">
+                            $@Model.TotalPriceUsd
+                            <small class="text-muted fs-6">total paid</small>
+                        </h2>
+                    </div>
+
+                    <div class="mb-4">
+                        <h5 class="mb-3">Reservation Status</h5>
+
+                        <div class="text-center mb-3">
+                            @{
+                                var statusBadgeClass = Model.ReservationStatus switch
+                                {
+                                    ReservationStatus.Pending => "bg-warning",
+                                    ReservationStatus.Confirmed => "bg-success",
+                                    ReservationStatus.CheckedIn => "bg-info",
+                                    ReservationStatus.CheckedOut => "bg-secondary",
+                                    ReservationStatus.Cancelled => "bg-danger",
+                                    _ => "bg-secondary"
+                                };
+                                var statusIcon = Model.ReservationStatus switch
+                                {
+                                    ReservationStatus.Pending => "fas fa-clock",
+                                    ReservationStatus.Confirmed => "fas fa-check-circle",
+                                    ReservationStatus.CheckedIn => "fas fa-door-open",
+                                    ReservationStatus.CheckedOut => "fas fa-door-closed",
+                                    ReservationStatus.Cancelled => "fas fa-times-circle",
+                                    _ => "fas fa-question-circle"
+                                };
+                            }
+                            <span class="badge @statusBadgeClass fs-5 px-4 py-3">
+                                <i class="@statusIcon me-2"></i>@Model.ReservationStatus
+                            </span>
+                        </div>
+
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span class="text-muted">
+                                <i class="fas fa-home me-2"></i>Apartment
+                            </span>
+                            <span class="fw-semibold">@Model.Apartment.Name</span>
+                        </div>
+
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span class="text-muted">
+                                <i class="fas fa-star me-2"></i>Rating
+                            </span>
+                            <span class="fw-semibold">
+                                @if (Model.Apartment.Rating > 0)
+                                {
+                                    <span>@Model.Apartment.Rating</span>
+                                    <i class="fas fa-star text-warning ms-1"></i>
+                                }
+                                else
+                                {
+                                    <span class="text-muted">No rating yet</span>
+                                }
+                            </span>
+                        </div>
+
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="text-muted">
+                                <i class="fas fa-dollar-sign me-2"></i>Rate
+                            </span>
+                            <span class="fw-semibold">$@Model.Apartment.PricePerNightPerPersonUsd / person / night</span>
+                        </div>
+                    </div>
+
+                    <div class="d-grid mb-3">
+                        @if (Model.ReservationStatus == ReservationStatus.Confirmed || Model.ReservationStatus == ReservationStatus.CheckedIn)
+                        {
+                            <a asp-controller="Apartment" asp-action="Details" asp-route-apartmentId="@Model.ApartmentId"
+                               class="btn btn-primary btn-lg">
+                                <i class="fas fa-eye me-2"></i>View Apartment
+                            </a>
+                        }
+                        else if (Model.ReservationStatus == ReservationStatus.CheckedOut)
+                        {
+                            <button class="btn btn-success btn-lg" disabled>
+                                <i class="fas fa-check me-2"></i>Stay Completed
+                            </button>
+                        }
+                        else if (Model.ReservationStatus == ReservationStatus.Cancelled)
+                        {
+                            <button class="btn btn-danger btn-lg" disabled>
+                                <i class="fas fa-times me-2"></i>Reservation Cancelled
+                            </button>
+                        }
+                        else
+                        {
+                            <button class="btn btn-warning btn-lg" disabled>
+                                <i class="fas fa-clock me-2"></i>Awaiting Confirmation
+                            </button>
+                        }
+                    </div>
+
+                    <div class="text-center">
+                        <small class="text-muted">
+                            <i class="fas fa-shield-alt me-1"></i>
+                            Secure booking • Protected by DotHotel
+                        </small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card border-0 shadow-sm mt-4">
+                <div class="card-body">
+                    <h6 class="card-title mb-3">Booking Summary</h6>
+
+                    <div class="d-flex justify-content-between mb-2">
+                        <span class="text-muted">Rate per person per night</span>
+                        <span>$@Model.Apartment.PricePerNightPerPersonUsd</span>
+                    </div>
+
+                    <div class="d-flex justify-content-between mb-2">
+                        <span class="text-muted">@Model.GuestCount guests × @((Model.CheckOutDate - Model.CheckInDate).Days) nights</span>
+                        <span>$@(Model.Apartment.PricePerNightPerPersonUsd* Model.GuestCount * (Model.CheckOutDate - Model.CheckInDate).Days)</span>
+                    </div>
+
+                    <hr class="my-3">
+
+                    <div class="d-flex justify-content-between fw-bold">
+                        <span>Total</span>
+                        <span class="text-success">$@Model.TotalPriceUsd</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-5">
+        <div class="col-12">
+            <div class="text-center">
+                <a asp-controller="Reservation" asp-action="Index" class="btn btn-outline-primary">
+                    <i class="fas fa-arrow-left me-2"></i>Back to My Reservations
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <style>
+        .font-monospace {
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .badge {
+            font-weight: 500;
+        }
+
+        .card {
+            transition: transform 0.2s ease;
+        }
+
+        .position-sticky {
+            top: 2rem !important;
+        }
+
+        @@media (max-width: 992px) {
+            .position-sticky
+
+        {
+            position: static !important;
+        }
+
+        }
+    </style>
+}

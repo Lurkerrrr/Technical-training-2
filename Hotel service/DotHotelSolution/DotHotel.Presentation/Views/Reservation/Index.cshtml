@@ -1,0 +1,261 @@
+﻿@using DotHotel.Core.DataTransferObjects.ReservationObjects
+@using DotHotel.Core.Enums
+
+@model List<ReservationResponse>
+@{
+    ViewData["Title"] = "My Reservations";
+    Layout = "_Layout";
+    var searchOptions = ViewBag.SearchOptions as ReservationSearchOptions ?? new ReservationSearchOptions();
+}
+
+<div class="container mt-3">
+    <div class="row mb-4">
+        <div class="col-12">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item">
+                        <a asp-controller="Home" asp-action="Index">Home</a>
+                    </li>
+                    <li class="breadcrumb-item active">My Reservations</li>
+                </ol>
+            </nav>
+
+            <div class="d-flex justify-content-between align-items-center">
+                <div>
+                    <h1 class="h2 mb-1">My Reservations</h1>
+                    <p class="text-muted mb-0">View all your apartment bookings</p>
+                </div>
+                <div>
+                    <a asp-controller="Apartment" asp-action="Index" class="btn btn-primary">
+                        <i class="fas fa-search me-2"></i>Find Apartments
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <partial name="Partial/_ReservationSearchOptions" model="searchOptions" />
+
+    <div class="row">
+        <div class="col-12">
+            @if (Model.Any())
+            {
+                <div class="row g-4">
+                    @foreach (var reservation in Model)
+                    {
+                        <div class="col-12">
+                            <div class="card border-0 shadow-sm mb-3">
+                                <div class="card-body p-3">
+                                    <div class="row align-items-center">
+                                        <div class="col-md-2">
+                                            @if (reservation.Apartment.ApartmentImagesBase64?.Any() == true)
+                                            {
+                                                <img src="@reservation.Apartment.ApartmentImagesBase64.First()"
+                                                     class="img-fluid rounded shadow-sm"
+                                                     alt="@reservation.Apartment.Name"
+                                                     style="height: 100px; width: 100%; object-fit: cover;">
+                                            }
+                                            else
+                                            {
+                                                <div class="bg-light rounded d-flex align-items-center justify-content-center shadow-sm"
+                                                     style="height: 100px; width: 100%;">
+                                                    <i class="fas fa-home fa-2x text-muted"></i>
+                                                </div>
+                                            }
+                                        </div>
+
+                                        <div class="col-md-7">
+                                            <h5 class="mb-2">@reservation.Apartment.Name</h5>
+                                            <div class="row text-muted small">
+                                                <div class="col-6">
+                                                    <i class="fas fa-calendar-check me-1"></i> @reservation.CheckInDate.ToString("MMM dd, yyyy")
+                                                </div>
+                                                <div class="col-6">
+                                                    <i class="fas fa-calendar-times me-1"></i> @reservation.CheckOutDate.ToString("MMM dd, yyyy")
+                                                </div>
+                                                <div class="col-4 mt-1">
+                                                    <i class="fas fa-users me-1"></i> @reservation.GuestCount guests
+                                                </div>
+                                                <div class="col-4 mt-1">
+                                                    <i class="fas fa-moon me-1"></i> @((reservation.CheckOutDate - reservation.CheckInDate).Days) nights
+                                                </div>
+                                                <div class="col-4 mt-1">
+                                                    <i class="fas fa-star text-warning me-1"></i> @reservation.Apartment.Rating/5
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-3 text-end">
+                                            @{
+                                                var statusBadgeClass = reservation.ReservationStatus switch
+                                                {
+                                                    ReservationStatus.Pending => "bg-warning",
+                                                    ReservationStatus.Confirmed => "bg-success",
+                                                    ReservationStatus.CheckedIn => "bg-info",
+                                                    ReservationStatus.CheckedOut => "bg-secondary",
+                                                    ReservationStatus.Cancelled => "bg-danger",
+                                                    _ => "bg-secondary"
+                                                };
+                                                var statusIcon = reservation.ReservationStatus switch
+                                                {
+                                                    ReservationStatus.Pending => "fas fa-clock",
+                                                    ReservationStatus.Confirmed => "fas fa-check-circle",
+                                                    ReservationStatus.CheckedIn => "fas fa-door-open",
+                                                    ReservationStatus.CheckedOut => "fas fa-door-closed",
+                                                    ReservationStatus.Cancelled => "fas fa-times-circle",
+                                                    _ => "fas fa-question-circle"
+                                                };
+                                            }
+                                            <div class="mb-2">
+                                                <span class="badge @statusBadgeClass px-3 py-2">
+                                                    <i class="@statusIcon me-1"></i>@reservation.ReservationStatus
+                                                </span>
+                                            </div>
+
+                                            <div class="mb-2 text-success h5">$@reservation.TotalPriceUsd</div>
+                                            <div class="mb-3 text-muted small">
+                                                <i class="fas fa-credit-card me-1"></i>@reservation.PaymentMethod
+                                            </div>
+
+                                            <button type="button" class="btn btn-sm btn-danger w-100 mb-2" onclick="openCancelModal('@reservation.Id')">
+                                                <i class="fas fa-times-circle me-1"></i>Cancel
+                                            </button>
+
+                                            @if (reservation.ReservationStatus == ReservationStatus.Pending)
+                                            {
+                                                <button type="button" class="btn btn-sm btn-dark w-100 mb-2" onclick="openPaymentModal('@reservation.Id', 'BLIK')">
+                                                    <i class="fas fa-mobile-alt me-1"></i>Pay with BLIK
+                                                </button>
+
+                                                <button type="button" class="btn btn-sm btn-primary w-100 mb-2" onclick="openPaymentModal('@reservation.Id', 'GooglePay')">
+                                                    <i class="fab fa-google-pay me-1"></i>Pay with Google Pay
+                                                </button>
+                                            }
+
+                                            <a class="btn btn-info w-100" asp-controller="Reservation" asp-action="ReservationDetails" asp-route-reservationId="@reservation.Id">
+                                                <i class="fas fa-eye me-1"></i>View Details
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            }
+            else
+            {
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body text-center py-5">
+                        <i class="fas fa-calendar-times fa-4x text-muted mb-4"></i>
+                        <h4>No reservations yet</h4>
+                        <p class="text-muted mb-4">You haven't made any reservations. Start exploring our apartments!</p>
+                        <a asp-controller="Apartment" asp-action="Index" class="btn btn-primary">
+                            <i class="fas fa-search me-2"></i>Browse Apartments
+                        </a>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+
+    <div class="modal fade" id="paymentModal" tabindex="-1" aria-labelledby="paymentModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form method="post" asp-controller="Reservation" asp-action="ProcessPayment">
+                    @Html.AntiForgeryToken()
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="paymentModalLabel">Confirm Payment</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <input type="hidden" id="paymentReservationId" name="ReservationId" value="" />
+                        <input type="hidden" id="paymentMethod" name="PaymentMethod" value="" />
+                        <p>Are you sure you want to proceed with payment using <strong id="paymentMethodText"></strong>?</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-credit-card me-1"></i>Pay Now
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="cancelReservationModal" tabindex="-1" aria-labelledby="cancelReservationModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="cancelReservationModalLabel">Confirm Cancellation</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Are you sure you want to cancel reservation?</p>
+                    <p class="text-muted small">This action cannot be undone.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <a id="confirmCancelButton"
+                       asp-controller="Reservation"
+                       asp-action="CancelReservation"
+                       asp-route-reservationId="@Guid.Empty"
+                       class="btn btn-danger">
+                        <i class="fas fa-times me-1"></i>Cancel Reservation
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        function openPaymentModal(reservationId, paymentMethod) {
+            $('#paymentReservationId').val(reservationId);
+            $('#paymentMethod').val(paymentMethod);
+            $('#paymentMethodText').text(paymentMethod);
+            var modal = new bootstrap.Modal(document.getElementById('paymentModal'));
+            modal.show();
+        }
+
+        function openCancelModal(reservationId, apartmentName) {
+            let currentHref = $("#confirmCancelButton").attr("href");
+            let updatedHref = currentHref.replace("00000000-0000-0000-0000-000000000000", reservationId);
+            $("#confirmCancelButton").attr("href", updatedHref);
+
+            var modal = new bootstrap.Modal(document.getElementById('cancelReservationModal'));
+            modal.show();
+        }
+    </script>
+
+    <style>
+        .card {
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+            .card:hover {
+                transform: translateY(-2px);
+                box-shadow: var(--shadow-lg);
+            }
+
+        .badge {
+            font-size: 0.875rem;
+            padding: 0.5rem 1rem;
+        }
+
+        @@media (max-width: 768px) {
+            .col-md-3, .col-md-6
+
+        {
+            margin-bottom: 1rem;
+        }
+
+        .text-end {
+            text-align: start !important;
+        }
+
+        }
+    </style>
+}

@@ -1,0 +1,34 @@
+C:\Users\user\Desktop\w68166\DotHotelSolution\DotHotel.Infrastructure\bin\Debug\net8.0\DotHotel.Infrastructure.deps.json
+C:\Users\user\Desktop\w68166\DotHotelSolution\DotHotel.Infrastructure\bin\Debug\net8.0\DotHotel.Infrastructure.runtimeconfig.json
+C:\Users\user\Desktop\w68166\DotHotelSolution\DotHotel.Infrastructure\bin\Debug\net8.0\DotHotel.Infrastructure.dll
+C:\Users\user\Desktop\w68166\DotHotelSolution\DotHotel.Infrastructure\bin\Debug\net8.0\DotHotel.Infrastructure.pdb
+C:\Users\user\Desktop\w68166\DotHotelSolution\DotHotel.Infrastructure\bin\Debug\net8.0\DotHotel.Core.dll
+C:\Users\user\Desktop\w68166\DotHotelSolution\DotHotel.Infrastructure\bin\Debug\net8.0\DotHotel.Core.pdb
+C:\Users\user\Desktop\w68166\DotHotelSolution\DotHotel.Infrastructure\obj\Debug\net8.0\DotHotel.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\w68166\DotHotelSolution\DotHotel.Infrastructure\obj\Debug\net8.0\DotHotel.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Desktop\w68166\DotHotelSolution\DotHotel.Infrastructure\obj\Debug\net8.0\DotHotel.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\user\Desktop\w68166\DotHotelSolution\DotHotel.Infrastructure\obj\Debug\net8.0\DotHotel.Infrastructure.AssemblyInfo.cs
+C:\Users\user\Desktop\w68166\DotHotelSolution\DotHotel.Infrastructure\obj\Debug\net8.0\DotHotel.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\w68166\DotHotelSolution\DotHotel.Infrastructure\obj\Debug\net8.0\DotHotel.C571D586.Up2Date
+C:\Users\user\Desktop\w68166\DotHotelSolution\DotHotel.Infrastructure\obj\Debug\net8.0\DotHotel.Infrastructure.dll
+C:\Users\user\Desktop\w68166\DotHotelSolution\DotHotel.Infrastructure\obj\Debug\net8.0\refint\DotHotel.Infrastructure.dll
+C:\Users\user\Desktop\w68166\DotHotelSolution\DotHotel.Infrastructure\obj\Debug\net8.0\DotHotel.Infrastructure.pdb
+C:\Users\user\Desktop\w68166\DotHotelSolution\DotHotel.Infrastructure\obj\Debug\net8.0\DotHotel.Infrastructure.genruntimeconfig.cache
+C:\Users\user\Desktop\w68166\DotHotelSolution\DotHotel.Infrastructure\obj\Debug\net8.0\ref\DotHotel.Infrastructure.dll
+C:\Users\user\Desktop\Hotel service\DotHotelSolution\DotHotel.Infrastructure\bin\Debug\net8.0\DotHotel.Infrastructure.deps.json
+C:\Users\user\Desktop\Hotel service\DotHotelSolution\DotHotel.Infrastructure\bin\Debug\net8.0\DotHotel.Infrastructure.runtimeconfig.json
+C:\Users\user\Desktop\Hotel service\DotHotelSolution\DotHotel.Infrastructure\bin\Debug\net8.0\DotHotel.Infrastructure.dll
+C:\Users\user\Desktop\Hotel service\DotHotelSolution\DotHotel.Infrastructure\bin\Debug\net8.0\DotHotel.Infrastructure.pdb
+C:\Users\user\Desktop\Hotel service\DotHotelSolution\DotHotel.Infrastructure\bin\Debug\net8.0\DotHotel.Core.dll
+C:\Users\user\Desktop\Hotel service\DotHotelSolution\DotHotel.Infrastructure\bin\Debug\net8.0\DotHotel.Core.pdb
+C:\Users\user\Desktop\Hotel service\DotHotelSolution\DotHotel.Infrastructure\obj\Debug\net8.0\DotHotel.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\Hotel service\DotHotelSolution\DotHotel.Infrastructure\obj\Debug\net8.0\DotHotel.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Desktop\Hotel service\DotHotelSolution\DotHotel.Infrastructure\obj\Debug\net8.0\DotHotel.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\user\Desktop\Hotel service\DotHotelSolution\DotHotel.Infrastructure\obj\Debug\net8.0\DotHotel.Infrastructure.AssemblyInfo.cs
+C:\Users\user\Desktop\Hotel service\DotHotelSolution\DotHotel.Infrastructure\obj\Debug\net8.0\DotHotel.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\Hotel service\DotHotelSolution\DotHotel.Infrastructure\obj\Debug\net8.0\DotHotel.C571D586.Up2Date
+C:\Users\user\Desktop\Hotel service\DotHotelSolution\DotHotel.Infrastructure\obj\Debug\net8.0\DotHotel.Infrastructure.dll
+C:\Users\user\Desktop\Hotel service\DotHotelSolution\DotHotel.Infrastructure\obj\Debug\net8.0\refint\DotHotel.Infrastructure.dll
+C:\Users\user\Desktop\Hotel service\DotHotelSolution\DotHotel.Infrastructure\obj\Debug\net8.0\DotHotel.Infrastructure.pdb
+C:\Users\user\Desktop\Hotel service\DotHotelSolution\DotHotel.Infrastructure\obj\Debug\net8.0\DotHotel.Infrastructure.genruntimeconfig.cache
+C:\Users\user\Desktop\Hotel service\DotHotelSolution\DotHotel.Infrastructure\obj\Debug\net8.0\ref\DotHotel.Infrastructure.dll
