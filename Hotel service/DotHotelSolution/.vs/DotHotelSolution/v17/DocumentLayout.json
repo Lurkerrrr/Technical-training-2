@@ -1,9 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\user\\Desktop\\Hotel service\\DotHotelSolution\\",
+  "WorkspaceRootPath": "D:\\Technical training 2 - C# - Repository\\Technical-training-2\\Hotel service\\DotHotelSolution\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3410863C-82E3-4251-919E-D041B5451EC6}|DotHotel.Infrastructure\\DotHotel.Infrastructure.csproj|c:\\users\\user\\desktop\\hotel service\\dothotelsolution\\dothotel.infrastructure\\databasecontext\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3410863C-82E3-4251-919E-D041B5451EC6}|DotHotel.Infrastructure\\DotHotel.Infrastructure.csproj|d:\\technical training 2 - c# - repository\\technical-training-2\\hotel service\\dothotelsolution\\dothotel.infrastructure\\databasecontext\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3410863C-82E3-4251-919E-D041B5451EC6}|DotHotel.Infrastructure\\DotHotel.Infrastructure.csproj|solutionrelative:dothotel.infrastructure\\databasecontext\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -32,9 +32,9 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Hotel service\\DotHotelSolution\\DotHotel.Infrastructure\\DatabaseContext\\ApplicationDbContext.cs",
+              "DocumentMoniker": "D:\\Technical training 2 - C# - Repository\\Technical-training-2\\Hotel service\\DotHotelSolution\\DotHotel.Infrastructure\\DatabaseContext\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "DotHotel.Infrastructure\\DatabaseContext\\ApplicationDbContext.cs",
-              "ToolTip": "C:\\Users\\user\\Desktop\\Hotel service\\DotHotelSolution\\DotHotel.Infrastructure\\DatabaseContext\\ApplicationDbContext.cs",
+              "ToolTip": "D:\\Technical training 2 - C# - Repository\\Technical-training-2\\Hotel service\\DotHotelSolution\\DotHotel.Infrastructure\\DatabaseContext\\ApplicationDbContext.cs",
               "RelativeToolTip": "DotHotel.Infrastructure\\DatabaseContext\\ApplicationDbContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -64,6 +64,10 @@
             {
               "$type": "Bookmark",
               "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:2:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
             },
             {
               "$type": "Bookmark",
