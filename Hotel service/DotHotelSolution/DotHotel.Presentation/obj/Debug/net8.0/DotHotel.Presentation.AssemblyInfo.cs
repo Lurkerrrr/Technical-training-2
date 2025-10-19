@@ -11,10 +11,11 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("6053f734-85db-4e9e-b51b-f0dc1e35b3ac")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("DotHotel.Presentation")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2c282ffa84f7acd8bb03f735082d1b2b89bec184")]
 [assembly: System.Reflection.AssemblyProductAttribute("DotHotel.Presentation")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DotHotel.Presentation")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

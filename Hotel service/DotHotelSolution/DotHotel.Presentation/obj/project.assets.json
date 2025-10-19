@@ -6416,11 +6416,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\user\\Desktop\\Hotel service\\DotHotelSolution\\DotHotel.Presentation\\DotHotel.Presentation.csproj",
+      "projectUniqueName": "D:\\Technical training 2 - C# - Repository\\Technical-training-2\\Hotel service\\DotHotelSolution\\DotHotel.Presentation\\DotHotel.Presentation.csproj",
       "projectName": "DotHotel.Presentation",
-      "projectPath": "C:\\Users\\user\\Desktop\\Hotel service\\DotHotelSolution\\DotHotel.Presentation\\DotHotel.Presentation.csproj",
+      "projectPath": "D:\\Technical training 2 - C# - Repository\\Technical-training-2\\Hotel service\\DotHotelSolution\\DotHotel.Presentation\\DotHotel.Presentation.csproj",
       "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\user\\Desktop\\Hotel service\\DotHotelSolution\\DotHotel.Presentation\\obj\\",
+      "outputPath": "D:\\Technical training 2 - C# - Repository\\Technical-training-2\\Hotel service\\DotHotelSolution\\DotHotel.Presentation\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -6442,11 +6442,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\user\\Desktop\\Hotel service\\DotHotelSolution\\DotHotel.Core\\DotHotel.Core.csproj": {
-              "projectPath": "C:\\Users\\user\\Desktop\\Hotel service\\DotHotelSolution\\DotHotel.Core\\DotHotel.Core.csproj"
+            "D:\\Technical training 2 - C# - Repository\\Technical-training-2\\Hotel service\\DotHotelSolution\\DotHotel.Core\\DotHotel.Core.csproj": {
+              "projectPath": "D:\\Technical training 2 - C# - Repository\\Technical-training-2\\Hotel service\\DotHotelSolution\\DotHotel.Core\\DotHotel.Core.csproj"
             },
-            "C:\\Users\\user\\Desktop\\Hotel service\\DotHotelSolution\\DotHotel.Infrastructure\\DotHotel.Infrastructure.csproj": {
-              "projectPath": "C:\\Users\\user\\Desktop\\Hotel service\\DotHotelSolution\\DotHotel.Infrastructure\\DotHotel.Infrastructure.csproj"
+            "D:\\Technical training 2 - C# - Repository\\Technical-training-2\\Hotel service\\DotHotelSolution\\DotHotel.Infrastructure\\DotHotel.Infrastructure.csproj": {
+              "projectPath": "D:\\Technical training 2 - C# - Repository\\Technical-training-2\\Hotel service\\DotHotelSolution\\DotHotel.Infrastructure\\DotHotel.Infrastructure.csproj"
             }
           }
         }

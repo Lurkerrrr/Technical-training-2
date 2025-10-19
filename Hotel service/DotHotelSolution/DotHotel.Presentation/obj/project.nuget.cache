@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "PZPg5am0cZI=",
+  "dgSpecHash": "NNAM0I7PlFc=",
   "success": true,
-  "projectFilePath": "C:\\Users\\user\\Desktop\\Hotel service\\DotHotelSolution\\DotHotel.Presentation\\DotHotel.Presentation.csproj",
+  "projectFilePath": "D:\\Technical training 2 - C# - Repository\\Technical-training-2\\Hotel service\\DotHotelSolution\\DotHotel.Presentation\\DotHotel.Presentation.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\user\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

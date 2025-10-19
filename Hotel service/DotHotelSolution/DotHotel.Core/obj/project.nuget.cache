@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "GZCkPXaAZ1o=",
+  "dgSpecHash": "kcPAul2VxY4=",
   "success": true,
-  "projectFilePath": "C:\\Users\\user\\Desktop\\Hotel service\\DotHotelSolution\\DotHotel.Core\\DotHotel.Core.csproj",
+  "projectFilePath": "D:\\Technical training 2 - C# - Repository\\Technical-training-2\\Hotel service\\DotHotelSolution\\DotHotel.Core\\DotHotel.Core.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\user\\.nuget\\packages\\entityframework\\6.5.0\\entityframework.6.5.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\linqkit\\1.3.8\\linqkit.1.3.8.nupkg.sha512",
